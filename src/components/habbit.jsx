@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 class Habbit extends Component {
   state = {
     count: 0,
-
   };
 
   handleIncrement = () => {
@@ -18,11 +17,12 @@ class Habbit extends Component {
 
 
   render() {
+    const { name, count } = this.props.habbit;
     return (
     <>
       <li className="habbit">
-        <span className="habbit-name">Reading</span>
-    <span className="habbit-count">{this.state.count}</span>
+        <span className="habbit-name">{name}</span>
+    <span className="habbit-count">{count}</span>
         <button className="habbit-button habbit-increase" onClick={this.handleIncrement}>
           <i className="fas fa-plus"></i>
         </button>
