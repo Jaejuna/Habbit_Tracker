@@ -1,39 +1,40 @@
 import React, { Component } from 'react';
 
 class Habbit extends Component {
-  state = {
-    count: 0,
+  handleIncrement = () => {
+    this.props.onIncrement(this.props.habbit);
   };
 
-  handleIncrement = () => {
-    //state 오브젝트 안에 있는 count를 증가 한 뒤 state를 업데이트 해햐 함.
-    this.setState({count: this.state.count + 1});
-  }
+  handleDecrement = () => {
+    this.props.onDecrement(this.props.habbit);
+  };
 
-  handleDecreament = () => {
-    const count = this.state.count - 1
-    this.setState({count: count < 0 ? 0 : count});
-  }
-
+  handleDelete = () => {
+    this.props.onDelete(this.props.habbit);
+  };
 
   render() {
     const { name, count } = this.props.habbit;
     return (
-    <>
       <li className="habbit">
         <span className="habbit-name">{name}</span>
-    <span className="habbit-count">{count}</span>
-        <button className="habbit-button habbit-increase" onClick={this.handleIncrement}>
+        <span className="habbit-count">{count}</span>
+        <button 
+        className="habbit-button habbit-increase" 
+        onClick={this.handleIncrement}>
           <i className="fas fa-plus"></i>
         </button>
-        <button className="habbit-button habbit-decrease" onClick={this.handleDecreament}>
+        <button 
+        className="habbit-button habbit-decrease" 
+        onClick={this.handleDecrement}>
           <i className="fas fa-minus"></i>
         </button>
-        <button className="habbit-button habbit-delete">
+        <button 
+        className="habbit-button habbit-delete" 
+        onClick={this.handleDelete}>
           <i className="fas fa-trash"></i>
         </button>
       </li>
-    </>
     );
   }
 }

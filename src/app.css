@@ -1,7 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
 button {
   outline: none;
   border: 0;
   cursor: pointer;
+}
+
+.navbar{
+  font-size: 2em;
+  padding: 1em;
+  background-color: blanchedalmond;
+}
+
+.navbar-logo{
+  color: black;
+  margin: 0.5em;
+}
+
+.navbar-count{
+  display: inline-block;
+  text-align: center;
+  font-size: 1.5em;
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 2.5rem;
+  margin-left: 0.2em;
+  background-color: black;
+  border-radius: 50%;
 }
 
 .habbit {
