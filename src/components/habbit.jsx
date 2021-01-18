@@ -21,17 +21,20 @@ class Habbit extends Component {
         <span className="habbit-count">{count}</span>
         <button 
         className="habbit-button habbit-increase" 
-        onClick={this.handleIncrement}>
+        onClick={this.handleIncrement}
+        >
           <i className="fas fa-plus"></i>
         </button>
         <button 
         className="habbit-button habbit-decrease" 
-        onClick={this.handleDecrement}>
+        onClick={this.handleDecrement}
+        >
           <i className="fas fa-minus"></i>
         </button>
         <button 
         className="habbit-button habbit-delete" 
-        onClick={this.handleDelete}>
+        onClick={this.handleDelete}
+        >
           <i className="fas fa-trash"></i>
         </button>
       </li>
