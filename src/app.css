@@ -15,8 +15,8 @@ button {
 }
 
 .navbar-logo{
-  color: black;
-  margin: 0.5em;
+  color: green;
+  margin: 0.2em;
 }
 
 .navbar-count{
@@ -48,7 +48,7 @@ button {
 .habbit {
   font-size: 2.5rem;
   padding: 0.5em;
-  padding-top: 2em;
+  padding-top: 1em;
   list-style: none;
 }
 
